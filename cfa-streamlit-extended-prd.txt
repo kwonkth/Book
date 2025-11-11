@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product_spec>
+  <app_overview>
+    <title lang="ko">고객 피드백 분석 & 개인 기록 관리 (확장 Streamlit 버전)</title>
+    <platform>Web (Streamlit Cloud 배포)</platform>
+    <purpose lang="ko">
+      고객 피드백 데이터를 분석하여 주요 이슈와 감성 분포를 시각화하고, 
+      동시에 개인 독서·취미 기록 관리 등 생활 데이터를 함께 관리/분석할 수 있도록 지원
+    </purpose>
+    <target_user lang="ko">
+      고객 서비스팀, 마케팅 팀, 그리고 자기계발을 위해 기록 관리와 데이터 분석을 원하는 일반 사용자
+    </target_user>
+  </app_overview>
+
+  <core_features>
+    <!-- 기존 기능 -->
+    <feature>
+      <title lang="ko">텍스트 감성 분석</title>
+      <description lang="ko">피드백 텍스트에서 긍정, 부정, 중립 감성 분류</description>
+    </feature>
+    <feature>
+      <title lang="ko">이슈 키워드 추출</title>
+      <description lang="ko">자주 언급되는 주요 키워드 추출 및 시각화</description>
+    </feature>
+    <feature>
+      <title lang="ko">분석 결과 시각화</title>
+      <description lang="ko">감성 분포 및 키워드 빈도 차트로 제공</description>
+    </feature>
+    <feature>
+      <title lang="ko">데이터 업로드</title>
+      <description lang="ko">CSV 또는 Excel 파일 업로드 기능 지원</description>
+    </feature>
+
+    <!-- 확장 기능 -->
+    <feature>
+      <title lang="ko">개인 기록 관리</title>
+      <description lang="ko">
+        독서 기록, 취미 활동, 생활 메모 등을 업로드·관리하여 개인 맞춤형 데이터 분석 가능
+      </description>
+    </feature>
+    <feature>
+      <title lang="ko">데이터 필터링 & 비교</title>
+      <description lang="ko">
+        기간/제품군/개인 취미별 분석 비교, 통계 및 차트 제공
+      </description>
+    </feature>
+    <feature>
+      <title lang="ko">보고서 자동 생성</title>
+      <description lang="ko">
+        분석 결과를 PDF 또는 Markdown 형태로 내보내기 기능
+      </description>
+    </feature>
+  </core_features>
+
+  <user_journey>
+    <steps>
+      <step lang="ko">피드백 또는 개인 기록 데이터 업로드</step>
+      <step lang="ko">텍스트 데이터 전처리 및 감성 분석 실행</step>
+      <step lang="ko">키워드 추출 및 분포 시각화 확인</step>
+      <step lang="ko">필터로 기간·제품군·개인 카테고리별 분석</step>
+      <step lang="ko">필요 시 PDF/Markdown 보고서 다운로드</step>
+    </steps>
+  </user_journey>
+
+  <tech_stack>
+    <frontend>Streamlit (단일 웹앱)</frontend>
+    <backend>Python (NLTK, KoNLPy, Scikit-learn, Hugging Face Transformers)</backend>
+    <database>경량 SQLite 또는 CSV 저장</database>
+    <auth>기본 공개, 필요 시 간단 로그인 확장 가능</auth>
+  </tech_stack>
+
+  <design_direction>
+    <style lang="ko">심플하고 직관적인 UI, 시각화는 컬러풀하게</style>
+    <inspiration>
+      Streamlit 예제 앱, Plotly Dash, 독서 기록/감성분석 통합 대시보드
+    </inspiration>
+  </design_direction>
+
+  <priorities>
+    <must_have>
+      <item lang="ko">정확한 감성 분석 및 키워드 추출</item>
+      <item lang="ko">사용자가 쉽게 데이터를 업로드하고 결과 확인</item>
+      <item lang="ko">Streamlit Cloud에서 원활히 실행 가능</item>
+    </must_have>
+    <nice_to_have>
+      <item lang="ko">개인 취미·독서 기록 관리 확장</item>
+      <item lang="ko">보고서 PDF/Markdown 다운로드 기능</item>
+      <item lang="ko">간단한 사용자 계정 관리</item>
+    </nice_to_have>
+  </priorities>
+</product_spec>
